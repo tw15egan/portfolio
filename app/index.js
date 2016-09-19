@@ -3,7 +3,7 @@ require('./scss/main.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const posterBg = require('./img/4.jpeg');
+const posterBg = require('./img/2.jpeg');
 
 class App extends React.Component {
   constructor(props) {
@@ -15,8 +15,12 @@ class App extends React.Component {
       backgroundImage: `url(${posterBg})`
     }
     return (
-      <div className="container" style={divStyle}>
-        <h1>TJ EGAN</h1>
+      <div className="container">
+        <img src={posterBg} />
+        <div>
+          <h1>TJ EGAN</h1>
+          <p>Front End Developer living in Austin, TX. Front End Developer living in Austin, TX. Front End Developer living in Austin, TX.</p>
+        </div>
       </div>
     )
   }
