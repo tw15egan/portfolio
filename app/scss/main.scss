@@ -1,4 +1,6 @@
-@import 'reset.scss';
+@import 'helpers/mixins';
+@import 'helpers/reset';
+@import 'helpers/vars';
 
 * {
   box-sizing: border-box;
@@ -12,16 +14,15 @@ body,
 }
 
 body {
-  
-  font-size: 4rem;
-  font-weight: 700;
-  
+
   h1 {
     font-family: "fatfrank", helvetica, arial, sans-serif;
+    font-size: em(64);
   }
   
   p {
     font-family: "proxima-nova", helvetica, arial, sans-serif;
+    font-size: em(18);
   }
 }
 
@@ -67,7 +68,6 @@ body {
     p {
       font-weight: 400;
       margin-top: 2rem;
-      font-size: 1rem;
       color: #000;
       display: inline;
       padding: 1.5rem 2rem;
