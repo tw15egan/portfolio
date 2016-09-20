@@ -11,14 +11,11 @@ class App extends React.Component {
   }
   
   render() {
-    const divStyle = {
-      backgroundImage: `url(${posterBg})`
-    }
+
     return (
       <div className="container">
-        <img src={posterBg} />
-        <div>
-          <h1>TJ EGAN</h1>
+        <div className="hero">
+          <h1>TJ &nbsp; EGAN</h1>
           <p>Front End Developer living in Austin, TX. Front End Developer living in Austin, TX. Front End Developer living in Austin, TX.</p>
         </div>
       </div>
