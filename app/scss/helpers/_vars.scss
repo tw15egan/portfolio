@@ -1,8 +1,11 @@
-$white: #fff;
-$black: #000;
+$white: #F5F5F5;
+$black: #2F3138;
 
 $color__red: #EF476F;
 $color__yellow: #FFD166;
 $color__green: #06D6A0;
 $color__blue: #118AB2;
 $color__blue--20: #073B4C;
+
+$animation-time: 280ms;
+$animation-easing: cubic-bezier(.62,.01,.89,.76);

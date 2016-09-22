@@ -16,16 +16,19 @@ body,
 
 body {
   font-size: em(18);
-  background-color: $color__red;
+  background-color: #F5F5F5;
 
   h1 {
+    -webkit-font-smoothing: anti-aliased;
     font-family: "fatfrank", helvetica, arial, sans-serif;
     line-height: 1.25;
+    letter-spacing: .5px;
   }
   
-  p {
+  p, span {
     font-family: "proxima-nova", helvetica, arial, sans-serif;
     line-height: 1.45;
+    letter-spacing: .25px;
   }
 }
 
