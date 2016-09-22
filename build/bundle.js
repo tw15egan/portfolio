@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/portfolio/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -56,6 +56,10 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
+	var _svgInlineReact = __webpack_require__(172);
+	
+	var _svgInlineReact2 = _interopRequireDefault(_svgInlineReact);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -64,7 +68,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(172);
+	__webpack_require__(173);
 	
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -78,18 +82,89 @@
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
-	      var posterBg = __webpack_require__(176);
-	      console.log(posterBg);
-	      var divStyle = {
-	        backgroundImage: { posterBg: posterBg }
-	      };
+	
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container', style: divStyle },
+	        { className: 'container' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'TJ EGAN'
+	          'div',
+	          { className: 'hero' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'hero__block' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'TJ EGAN'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'hero__block' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'I\'m a front end developer & designer based in ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Austin, TX'
+	              ),
+	              '. I like making cool things for the web.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'hero__icons' },
+	            _react2.default.createElement(
+	              'svg',
+	              { viewBox: '0 0 64 64', xmlns: 'http://www.w3.org/2000/svg' },
+	              _react2.default.createElement('path', { d: 'M32 0C14.327 0 0 14.327 0 32c0 17.673 14.327 32 32 32s32-14.327 32-32C64 14.327 49.673 0 32 0z' }),
+	              _react2.default.createElement('path', { d: 'M38.592 50.166H28.908s.014-2.874 0-4.844c-6.629 1.428-8.479-3.633-8.479-3.633-1.21-2.423-2.423-3.633-2.423-3.633-2.423-1.438 0-1.21 0-1.21 2.423 0 3.633 2.423 3.633 2.423 2.126 3.609 5.908 3.028 7.266 2.423 0-1.21.53-3.042 1.21-3.633-5.29-.595-9.693-3.633-9.693-9.689s1.216-7.266 2.427-8.479c-.244-.597-1.259-2.805.037-6.056 0 0 2.38 0 4.803 3.633 1.2-1.2 4.844-1.21 6.056-1.21 1.208 0 4.854.01 6.054 1.21 2.423-3.633 4.809-3.633 4.809-3.633 1.296 3.251.282 5.459.037 6.056 1.21 1.21 2.423 2.423 2.423 8.479s-4.397 9.092-9.689 9.689c.682.591 1.21 2.675 1.21 3.633l.003 8.474z', fill: '#FFF' })
+	            ),
+	            _react2.default.createElement(
+	              'svg',
+	              { viewBox: '0 0 32 32', xmlns: 'http://www.w3.org/2000/svg' },
+	              _react2.default.createElement('path', { d: 'M16-.005c-8.837 0-16 7.163-16 16 0 8.836 7.163 16 16 16s16-7.164 16-16c0-8.837-7.163-16-16-16z' }),
+	              _react2.default.createElement(
+	                'g',
+	                { fill: '#FFF' },
+	                _react2.default.createElement('path', { d: 'M18.209 7.177h-5.435c-2.486 0-4.827 1.745-4.827 3.926 0 2.229 1.695 3.962 4.224 3.962.176 0 .347-.04.515-.052-.166.313-.28.65-.28 1.017 0 .62.332 1.114.753 1.524-.316 0-.625.004-.961.004-3.08.001-5.45 1.961-5.45 3.995 0 2.003 2.599 3.258 5.679 3.258 3.512 0 5.451-1.994 5.451-3.997 0-1.606-.474-2.568-1.939-3.607-.502-.354-1.46-1.217-1.46-1.725 0-.594.169-.887 1.065-1.587.916-.716 1.566-1.57 1.566-2.743 0-1.394-.6-3.095-1.766-3.095h1.984l.881-.88zm-1.824 13.29c.042.187.068.378.068.572 0 1.619-1.045 2.884-4.038 2.884-2.129 0-3.666-1.347-3.666-2.966 0-1.586 1.907-2.908 4.037-2.884.495.005.959.086 1.379.22 1.156.805 1.985 1.259 2.22 2.174zm-3.41-6.038c-1.429-.041-2.788-1.598-3.034-3.474-.246-1.878.712-3.314 2.141-3.272 1.428.044 2.788 1.55 3.034 3.426.246 1.877-.712 3.362-2.141 3.32zM22.618 14.224v-2.645h-1.764v2.645h-2.645v1.764h2.645v2.645h1.764v-2.645h2.645v-1.764' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'svg',
+	              { viewBox: '0 0 32 32', xmlns: 'http://www.w3.org/2000/svg' },
+	              _react2.default.createElement('path', { d: 'M16 0C7.163 0 0 7.163 0 16c0 8.836 7.163 16 16 16s16-7.164 16-16c0-8.837-7.163-16-16-16z' }),
+	              _react2.default.createElement('path', { d: 'M24.294 22.942v-6.137c0-3.288-1.755-4.818-4.096-4.818-1.889 0-2.735 1.039-3.206 1.768v-1.517h-3.558c.047 1.005 0 10.704 0 10.704h3.558v-5.978c0-.319.023-.639.117-.867.257-.639.842-1.301 1.825-1.301 1.288 0 1.803.981 1.803 2.42v5.727l3.557-.001zM9.685 10.777c1.24 0 2.013-.823 2.013-1.85-.023-1.05-.773-1.849-1.99-1.849s-2.012.799-2.012 1.849c0 1.028.772 1.85 1.967 1.85h.022zm1.779 12.165V12.238H7.907v10.704h3.557z', fill: '#FFF' })
+	            ),
+	            _react2.default.createElement(
+	              'svg',
+	              { viewBox: '0 0 32 32', xmlns: 'http://www.w3.org/2000/svg' },
+	              _react2.default.createElement('path', { d: 'M16 0C7.163 0 0 7.163 0 16c0 8.836 7.163 16 16 16s16-7.164 16-16c0-8.837-7.163-16-16-16z' }),
+	              _react2.default.createElement('path', { d: 'M14.068 9.289c-1.232-.03-2.594.065-3.951.274-.958.143-1.91.321-2.826.637-.696.238-1.047.994-.815 1.66.244.702.964 1.065 1.672.851 1.755-.524 3.564-.714 5.385-.779 1.19-.042 2.374.036 3.552.161 1.44.149 2.856.422 4.242.833 1.178.351 2.303.827 3.374 1.434.619.351 1.303.214 1.726-.315.428-.541.399-1.208-.077-1.731-.173-.196-.411-.309-.637-.434-1.351-.744-2.779-1.285-4.266-1.678-2.363-.639-4.779-.943-7.379-.913zm-.107 4.891c-.494.012-.94.024-1.386.048-1.488.071-2.939.333-4.367.756-.643.19-.958.779-.768 1.416.167.559.774.875 1.38.714.208-.054.417-.131.631-.179 2.368-.583 4.766-.66 7.176-.327 2.279.309 4.439.976 6.414 2.172.589.357 1.238.095 1.511-.339.345-.541.179-1.238-.375-1.577-.702-.434-1.434-.809-2.19-1.119-2.593-1.059-5.289-1.553-8.026-1.565zm-.577 4.677c-.446.018-.893.042-1.333.083-1.136.095-2.255.292-3.368.547-.512.119-.797.583-.69 1.047.113.5.547.774 1.083.672.292-.054.583-.113.875-.173 1.19-.256 2.404-.369 3.618-.417.791-.03 1.583.018 2.368.101 1.369.143 2.684.47 3.951 1 .613.256 1.184.589 1.773.898.422.22.946.06 1.16-.339.244-.452.113-.946-.321-1.208-.69-.422-1.416-.774-2.172-1.083-2.226-.92-4.558-1.194-6.944-1.128z', fill: '#FFF' })
+	            ),
+	            _react2.default.createElement(
+	              'svg',
+	              { viewBox: '0 0 32 32', xmlns: 'http://www.w3.org/2000/svg' },
+	              _react2.default.createElement('path', { d: 'M16 0C7.163 0 0 7.163 0 16c0 8.836 7.163 16 16 16s16-7.164 16-16c0-8.837-7.163-16-16-16z' }),
+	              _react2.default.createElement('path', { d: 'M18.226 8.886c-1.59.579-2.595 2.071-2.481 3.704l.038.63-.636-.077c-2.315-.296-4.338-1.299-6.056-2.984l-.84-.836-.215.617c-.458 1.376-.165 2.83.789 3.808.509.54.394.617-.483.296-.305-.103-.573-.18-.598-.141-.089.09.216 1.26.458 1.724.331.644 1.005 1.273 1.743 1.647l.624.296-.739.011c-.712 0-.738.013-.661.284.254.836 1.259 1.724 2.379 2.11l.789.27-.687.412c-1.018.593-2.214.927-3.41.951-.573.013-1.044.064-1.044.103 0 .128 1.553.848 2.455 1.132 2.71.836 5.929.475 8.346-.952 1.718-1.016 3.435-3.036 4.237-4.992.433-1.041.865-2.945.865-3.858 0-.592.038-.669.75-1.376.42-.412.814-.862.891-.99.128-.245.114-.245-.534-.026-1.081.386-1.234.335-.699-.244.394-.412.865-1.158.865-1.376 0-.038-.191.026-.407.141-.229.129-.738.322-1.12.437l-.687.219-.623-.426c-.344-.231-.826-.489-1.081-.566-.65-.18-1.642-.154-2.228.052z', fill: '#FFF' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'hero__arrow' },
+	            _react2.default.createElement(
+	              'svg',
+	              { height: '32', viewBox: '0 0 32 32', width: '32', xmlns: 'http://www.w3.org/2000/svg' },
+	              _react2.default.createElement(
+	                'g',
+	                null,
+	                _react2.default.createElement('path', { d: 'M23.662 15.286l-6.9-6.999c-.39-.394-1.024-.394-1.414 0-.391.394-.391 1.034 0 1.428L21.544 16l-6.196 6.285c-.391.394-.391 1.034 0 1.428.391.394 1.024.394 1.414 0l6.899-6.999c.377-.379.378-1.048.001-1.428z' }),
+	                _react2.default.createElement('path', { d: 'M16.662 15.286L9.763 8.287c-.391-.394-1.024-.394-1.414 0-.391.394-.391 1.034 0 1.428L14.544 16l-6.196 6.285c-.391.394-.391 1.034 0 1.428.391.394 1.024.394 1.414 0l6.899-6.999c.377-.379.378-1.048.001-1.428z' })
+	              )
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -21475,13 +21550,169 @@
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var DOMParser = typeof window !== 'undefined' && window.DOMParser;
+	var process = process || {};
+	process.env = process.env || {};
+	var parserAvailable = typeof DOMParser !== 'undefined' && DOMParser.prototype != null && DOMParser.prototype.parseFromString != null;
+	
+	if ("production" !== process.env.NODE_ENV && !parserAvailable) {
+	    console.info('<InlineSVG />: `raw` prop works only when `window.DOMParser` exists.');
+	}
+	
+	function isParsable(src) {
+	    // kinda naive but meh, ain't gonna use full-blown parser for this
+	    return parserAvailable && typeof src === 'string' && src.trim().substr(0, 4) === '<svg';
+	}
+	
+	// parse SVG string using `DOMParser`
+	function parseFromSVGString(src) {
+	    var parser = new DOMParser();
+	    return parser.parseFromString(src, "image/svg+xml");
+	}
+	
+	// Transform DOM prop/attr names applicable to `<svg>` element but react-limited
+	function switchSVGAttrToReactProp(propName) {
+	    switch (propName) {
+	        case 'class':
+	            return 'className';
+	        default:
+	            return propName;
+	    }
+	}
+	
+	var InlineSVG = (function (_React$Component) {
+	    _inherits(InlineSVG, _React$Component);
+	
+	    _createClass(InlineSVG, null, [{
+	        key: 'defaultProps',
+	        value: {
+	            element: 'i',
+	            raw: false,
+	            src: ''
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'propTypes',
+	        value: {
+	            src: _react2['default'].PropTypes.string.isRequired,
+	            element: _react2['default'].PropTypes.string,
+	            raw: _react2['default'].PropTypes.bool
+	        },
+	        enumerable: true
+	    }]);
+	
+	    function InlineSVG(props) {
+	        _classCallCheck(this, InlineSVG);
+	
+	        _get(Object.getPrototypeOf(InlineSVG.prototype), 'constructor', this).call(this, props);
+	        this._extractSVGProps = this._extractSVGProps.bind(this);
+	    }
+	
+	    // Serialize `Attr` objects in `NamedNodeMap`
+	
+	    _createClass(InlineSVG, [{
+	        key: '_serializeAttrs',
+	        value: function _serializeAttrs(map) {
+	            var ret = {};
+	            var prop = undefined;
+	            for (var i = 0; i < map.length; i++) {
+	                prop = switchSVGAttrToReactProp(map[i].name);
+	                ret[prop] = map[i].value;
+	            }
+	            return ret;
+	        }
+	
+	        // get <svg /> element props
+	    }, {
+	        key: '_extractSVGProps',
+	        value: function _extractSVGProps(src) {
+	            var map = parseFromSVGString(src).documentElement.attributes;
+	            return map.length > 0 ? this._serializeAttrs(map) : null;
+	        }
+	
+	        // get content inside <svg> element.
+	    }, {
+	        key: '_stripSVG',
+	        value: function _stripSVG(src) {
+	            return parseFromSVGString(src).documentElement.innerHTML;
+	        }
+	    }, {
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(_ref) {
+	            var children = _ref.children;
+	
+	            if ("production" !== process.env.NODE_ENV && children != null) {
+	                console.info('<InlineSVG />: `children` prop will be ignored.');
+	            }
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var Element = undefined,
+	                __html = undefined,
+	                svgProps = undefined;
+	            var _props = this.props;
+	            var element = _props.element;
+	            var raw = _props.raw;
+	            var src = _props.src;
+	
+	            var otherProps = _objectWithoutProperties(_props, ['element', 'raw', 'src']);
+	
+	            if (raw === true && isParsable(src)) {
+	                Element = 'svg';
+	                svgProps = this._extractSVGProps(src);
+	                __html = this._stripSVG(src);
+	            }
+	            __html = __html || src;
+	            Element = Element || element;
+	            svgProps = svgProps || {};
+	
+	            return _react2['default'].createElement(Element, _extends({}, svgProps, otherProps, { src: null, children: null,
+	                dangerouslySetInnerHTML: { __html: __html } }));
+	        }
+	    }]);
+	
+	    return InlineSVG;
+	})(_react2['default'].Component);
+	
+	exports['default'] = InlineSVG;
+	module.exports = exports['default'];
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(173);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -21498,21 +21729,21 @@
 	}
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(174)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nhtml,\nbody,\n#app {\n  height: 100%;\n  width: 100%; }\n\nbody {\n  font-family: Arvo, helvetica, arial, sans-serif;\n  padding: 5rem;\n  font-size: 4rem;\n  font-weight: 700; }\n\n.container {\n  height: 100%;\n  width: 100%;\n  background-size: cover; }\n", "", {"version":3,"sources":["/./app/scss/app/scss/_reset.scss","/./app/scss/app/scss/main.scss"],"names":[],"mappings":"AAAA;;;EAGE;AAEF;;;;;;;;;;;;;EAaC,UAAU;EACV,WAAW;EACX,UAAU;EACV,gBAAgB;EAChB,cAAc;EACd,yBAAyB,EACzB;;AACD,iDAAiD;AACjD;;EAEC,eAAe,EACf;;AACD;EACC,eAAe,EACf;;AACD;EACC,iBAAiB,EACjB;;AACD;EACC,aAAa,EACb;;AACD;;EAEC,YAAY;EACZ,cAAc,EACd;;AACD;EACC,0BAA0B;EAC1B,kBAAkB,EAClB;;AC7CD;EACE,uBAAuB,EACxB;;AAED;;;EAGE,aAAa;EACb,YAAY,EACb;;AAED;EACE,gDAAgD;EAChD,cAAc;EACd,gBAAgB;EAChB,iBAAiB,EAClB;;AAED;EACE,aAAa;EACb,YAAY;EACZ,uBAAuB,EACxB","file":"main.scss","sourcesContent":["/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}","@import 'reset.scss';\n\n* {\n  box-sizing: border-box;\n}\n\nhtml,\nbody,\n#app {\n  height: 100%;\n  width: 100%;\n}\n\nbody {\n  font-family: Arvo, helvetica, arial, sans-serif;\n  padding: 5rem;\n  font-size: 4rem;\n  font-weight: 700;\n}\n\n.container {\n  height: 100%;\n  width: 100%;\n  background-size: cover;\n}"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n.hero {\n  padding: 2rem;\n  position: relative; }\n  .hero__container {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-between;\n    margin-bottom: 2rem; }\n  .hero__block {\n    display: inline-block;\n    max-height: 154px;\n    color: #F5F5F5;\n    background-color: #2F3138;\n    width: auto;\n    transition: 280ms all linear;\n    animation: 280ms ease-out forwards pop; }\n    .hero__block:nth-child(odd) {\n      margin-bottom: 2rem; }\n  .hero__icons {\n    display: flex;\n    justify-content: flex-end;\n    box-shadow: none;\n    position: absolute;\n    bottom: 1rem;\n    right: 1rem; }\n    .hero__icons svg {\n      margin: 0 .25rem;\n      transition: 280ms all;\n      width: 100%;\n      max-width: 2rem;\n      max-height: 2rem;\n      fill: #2F3138;\n      border-radius: 50%; }\n      .hero__icons svg:hover {\n        transform: scale(1.1);\n        box-shadow: 0px 0px 0 3px #EF476F; }\n  .hero__arrow {\n    height: 2rem;\n    width: 2rem;\n    position: absolute;\n    bottom: 1rem;\n    left: 0;\n    right: 0;\n    margin: 0 auto; }\n    .hero__arrow svg {\n      opacity: 0;\n      fill: #2F3138;\n      transform: rotate(90deg);\n      transition: 280ms all linear;\n      animation: 3.5s linear 3s infinite normal both shimmer; }\n  .hero h1 {\n    display: inline-block;\n    padding: 2rem 4rem;\n    white-space: nowrap;\n    font-size: 4em; }\n  .hero p {\n    font-size: 1.25em;\n    font-weight: 400;\n    padding: 2rem 3rem; }\n    .hero p span {\n      transition: 280ms all ease-out;\n      display: inline;\n      box-shadow: inset 0 -4px 0 #EF476F; }\n      .hero p span:hover {\n        box-shadow: inset 200px -4px 0 #EF476F; }\n\n.hero .hero__block:nth-child(1) {\n  animation-delay: 780ms; }\n\n.hero .hero__block:nth-child(2) {\n  animation-delay: 1060ms; }\n\n.hero .hero__block:nth-child(3) {\n  animation-delay: 1340ms; }\n\n@keyframes pop {\n  100% {\n    transform: scale(1) translateY(0);\n    opacity: 1;\n    visibility: visible; } }\n\n@keyframes shimmer {\n  0% {\n    transform: translateY(-10px) rotate(90deg);\n    opacity: 0; }\n  25% {\n    transform: translateY(0) rotate(90deg);\n    opacity: 1; }\n  50% {\n    transform: translateY(10px) rotate(90deg);\n    opacity: 1; }\n  75% {\n    transform: scaleY(1) translateY(0) rotate(90deg);\n    opacity: 0; } }\n\n* {\n  box-sizing: border-box; }\n\nhtml,\nbody,\n#app {\n  height: 100%;\n  width: 100%; }\n\nbody {\n  font-size: 1.125em;\n  background-color: #F5F5F5; }\n  body h1 {\n    -webkit-font-smoothing: anti-aliased;\n    font-family: \"fatfrank\", helvetica, arial, sans-serif;\n    line-height: 1.25;\n    letter-spacing: .5px; }\n  body p, body span {\n    font-family: \"proxima-nova\", helvetica, arial, sans-serif;\n    line-height: 1.45;\n    letter-spacing: .25px; }\n\n.container {\n  height: 100%;\n  width: 100%; }\n", "", {"version":3,"sources":["/./app/scss/app/scss/helpers/_reset.scss","/./app/scss/app/scss/components/hero.scss","/./app/scss/app/scss/helpers/_vars.scss","/./app/scss/app/scss/helpers/_mixins.scss","/./app/scss/app/scss/main.scss"],"names":[],"mappings":"AAAA;;;EAGE;AAEF;;;;;;;;;;;;;EAaC,UAAU;EACV,WAAW;EACX,UAAU;EACV,gBAAgB;EAChB,cAAc;EACd,yBAAyB,EACzB;;AACD,iDAAiD;AACjD;;EAEC,eAAe,EACf;;AACD;EACC,eAAe,EACf;;AACD;EACC,iBAAiB,EACjB;;AACD;EACC,aAAa,EACb;;AACD;;EAEC,YAAY;EACZ,cAAc,EACd;;AACD;EACC,0BAA0B;EAC1B,kBAAkB,EAClB;;AC/CD;EACE,cAAc;EACd,mBAAmB,EAuFpB;EAzFD;IAKI,cAAc;IACd,kBAAkB;IAClB,+BAA+B;IAC/B,oBAAoB,EACrB;EATH;IAYI,sBAAsB;IACtB,kBAAkB;IAClB,eCdW;IDeX,0BCdW;IDeX,YAAY;IACZ,6BAA6B;IAC7B,uCAAgD,EAKjD;IAvBH;MAqBM,oBAAoB,EACrB;EAtBL;IA0BI,cAAc;IACd,0BAA0B;IAC1B,iBAAiB;IACjB,mBAAmB;IACnB,aAAa;IACb,YAAY,EAgBb;IA/CH;MAkCM,iBAAiB;MACjB,sBAA+B;MAC/B,YAAY;MACZ,gBAAgB;MAChB,iBAAiB;MACjB,cCtCS;MDuCT,mBAAmB,EAMpB;MA9CL;QA2CQ,sBAAgB;QAChB,kCCzCY,ED0Cb;EA7CP;IAkDI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,aAAa;IACb,QAAQ;IACR,SAAS;IACT,eAAe,EAShB;IAjEH;MA2DM,WAAW;MACX,cC3DS;MD4DT,yBAAiB;MACjB,6BAA6B;MAC7B,uDAAuD,EACxD;EAhEL;IAoEI,sBAAsB;IACtB,mBAAmB;IACnB,oBAAoB;IACpB,eEpEc,EFqEf;EAxEH;IA2EI,kBExEc;IFyEd,iBAAiB;IACjB,mBAAmB,EAWpB;IAxFH;MAgFM,+BAA+B;MAC/B,gBAAgB;MAChB,mCC/Ec,EDoFf;MAvFL;QAqFQ,uCClFY,EDmFb;;AAML;EAEI,uBAAoB,EACrB;;AAHH;EAEI,wBAAoB,EACrB;;AAHH;EAEI,wBAAoB,EACrB;;AAIL;EACE;IACE,kCAA8B;IAC9B,WAAW;IACX,oBAAoB,EAAA,EAAA;;AAIxB;EACE;IACE,2CAAmC;IACnC,WAAW,EAAA;EAEb;IACE,uCAA+B;IAC/B,WAAW,EAAA;EAEb;IACE,0CAAkC;IAClC,WAAW,EAAA;EAGb;IACE,iDAAyC;IACzC,WAAW,EAAA,EAAA;;AGtHf;EACE,uBAAuB,EACxB;;AAED;;;EAGE,aAAa;EACb,YAAY,EACb;;AAED;EACE,mBDdgB;ECehB,0BAA0B,EAc3B;EAhBD;IAKI,qCAAqC;IACrC,sDAAsD;IACtD,kBAAkB;IAClB,qBAAqB,EACtB;EATH;IAYI,0DAA0D;IAC1D,kBAAkB;IAClB,sBAAsB,EACvB;;AAGH;EACE,aAAa;EACb,YAAY,EACb","file":"main.scss","sourcesContent":["/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}",".hero {\n  padding: 2rem;\n  position: relative;\n  \n  &__container {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-between;\n    margin-bottom: 2rem;\n  }\n  \n  &__block {\n    display: inline-block;\n    max-height: 154px;\n    color: $white;\n    background-color: $black;\n    width: auto;\n    transition: 280ms all linear;\n    animation: $animation-time ease-out forwards pop;\n    \n    &:nth-child(odd) {\n      margin-bottom: 2rem;\n    }\n  }\n  \n  &__icons {\n    display: flex;\n    justify-content: flex-end;\n    box-shadow: none;\n    position: absolute;\n    bottom: 1rem;\n    right: 1rem;\n    \n    svg {\n      margin: 0 .25rem;\n      transition: $animation-time all;\n      width: 100%;\n      max-width: 2rem;\n      max-height: 2rem;\n      fill: $black;\n      border-radius: 50%;\n      \n      &:hover {\n        transform: scale(1.1);\n        box-shadow: 0px 0px 0 3px $color__red;\n      }\n    }\n  }\n  \n  &__arrow {\n    height: 2rem;\n    width: 2rem;\n    position: absolute;\n    bottom: 1rem;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n    svg {\n      opacity: 0;\n      fill: $black;\n      transform: rotate(90deg);\n      transition: 280ms all linear;\n      animation: 3.5s linear 3s infinite normal both shimmer;\n    }\n  }\n\n  h1 {\n    display: inline-block;\n    padding: 2rem 4rem;\n    white-space: nowrap;\n    font-size: em(64);\n  }\n  \n  p {\n    font-size: em(20);\n    font-weight: 400;\n    padding: 2rem 3rem;\n    \n    span {\n      transition: 280ms all ease-out;\n      display: inline;\n      box-shadow: inset 0 -4px 0 $color__red;\n      \n      &:hover {\n        box-shadow: inset 200px -4px 0 $color__red;\n      }\n    }\n  }\n}\n\n@for $i from 1 to 4 {\n  .hero {\n    .hero__block:nth-child(#{$i}) {\n      animation-delay: ($i * $animation-time) + 500;\n    }\n  }\n}\n\n@keyframes pop {\n  100% {\n    transform: scale(1) translateY(0);\n    opacity: 1;\n    visibility: visible;\n  }\n}\n\n@keyframes shimmer {\n  0% {\n    transform: translateY(-10px) rotate(90deg);\n    opacity: 0;\n  }\n  25% {\n    transform: translateY(0) rotate(90deg);\n    opacity: 1;\n  }\n  50% {\n    transform: translateY(10px) rotate(90deg);\n    opacity: 1;\n  }\n  \n  75% {\n    transform: scaleY(1) translateY(0) rotate(90deg);\n    opacity: 0;\n  }\n}\n","$white: #F5F5F5;\n$black: #2F3138;\n\n$color__red: #EF476F;\n$color__yellow: #FFD166;\n$color__green: #06D6A0;\n$color__blue: #118AB2;\n$color__blue--20: #073B4C;\n\n$animation-time: 280ms;\n$animation-easing: cubic-bezier(.62,.01,.89,.76);","$browser-context: 16;\n\n@function em($pixels, $context: $browser-context) {\n  @return ($pixels / $context) * 1em;\n}","@import 'helpers/mixins';\n@import 'helpers/reset';\n@import 'helpers/vars';\n@import 'components/hero';\n\n* {\n  box-sizing: border-box;\n}\n\nhtml,\nbody,\n#app {\n  height: 100%;\n  width: 100%;\n}\n\nbody {\n  font-size: em(18);\n  background-color: #F5F5F5;\n\n  h1 {\n    -webkit-font-smoothing: anti-aliased;\n    font-family: \"fatfrank\", helvetica, arial, sans-serif;\n    line-height: 1.25;\n    letter-spacing: .5px;\n  }\n  \n  p, span {\n    font-family: \"proxima-nova\", helvetica, arial, sans-serif;\n    line-height: 1.45;\n    letter-spacing: .25px;\n  }\n}\n\n.container {\n  height: 100%;\n  width: 100%;\n}"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports) {
 
 	/*
@@ -21568,7 +21799,7 @@
 
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -21818,12 +22049,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "081dce962bff9867b40e871fcf5caad7.jpeg";
 
 /***/ }
 /******/ ]);

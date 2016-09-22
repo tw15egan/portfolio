@@ -17,8 +17,8 @@ const common = {
   },
   output: {
     path: PATHS.build,
-    // publicPath: '/color-picker/',
-    filename: 'bundle.js',
+    publicPath: '/portfolio/',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -41,10 +41,6 @@ const common = {
           'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
           'raw-loader'
         ]
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline'
       }
     ]
   },
