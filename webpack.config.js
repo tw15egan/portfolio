@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpackUglifyJsPlugin = require('webpack-uglify-js-plugin');
 const validate = require('webpack-validator');
 
 // HMR Config
@@ -17,7 +18,7 @@ const common = {
   },
   output: {
     path: PATHS.build,
-    publicPath: '/portfolio/',
+    // publicPath: '/portfolio/',
     filename: 'bundle.js'
   },
   module: {
@@ -35,11 +36,10 @@ const common = {
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       },
       {
-        test: /\.(jpe?g|png|gif)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
-          'raw-loader'
+          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       }
     ]
@@ -63,7 +63,8 @@ switch(process.env.npm_lifecycle_event) {
       common, 
       {
         devtool: 'source-map'
-      }
+      },
+      parts.minify()
     );
     break;
   default:

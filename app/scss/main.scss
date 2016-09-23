@@ -1,38 +1,5 @@
+// @import 'helpers/reset';
 @import 'helpers/mixins';
-@import 'helpers/reset';
 @import 'helpers/vars';
+@import 'components/overlay';
 @import 'components/hero';
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#app {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  font-size: em(18);
-  background-color: #F5F5F5;
-
-  h1 {
-    -webkit-font-smoothing: anti-aliased;
-    font-family: "fatfrank", helvetica, arial, sans-serif;
-    line-height: 1.25;
-    letter-spacing: .5px;
-  }
-  
-  p, span {
-    font-family: "proxima-nova", helvetica, arial, sans-serif;
-    line-height: 1.45;
-    letter-spacing: .25px;
-  }
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-}
