@@ -1,22 +1,23 @@
 .overlay {
+  height: 100vh;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
-  background-color: $black;
-  opacity: .9;
   z-index: -1;
-  
+
   &__image {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
+    background-position: 55% 50%;
     background-repeat: no-repeat;
-    filter: saturate(0%) contrast(190%) brightness(.25);
-    mix-blend-mode: overlay;
+    background-size: cover;
+    filter: saturate(0%) contrast(150%) brightness(.75);
+    height: 100vh;
+    position: relative;
+    width: 100%;
+
+    @include bp('500px') {
+      background-position: center center;
+    }
   }
 }
 

@@ -24,6 +24,7 @@
     "image-webpack-loader": "^2.0.0",
     "node-sass": "^3.9.3",
     "npm": "^3.10.8",
+    "sass-lint": "^1.9.1",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",

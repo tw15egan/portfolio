@@ -30,16 +30,16 @@ class App extends React.Component {
 
         <div className="hero">
           <div className="hero__block hero__block--title">
-            <h1>TJ EGAN</h1>
+            <h1 className="hero__title">TJ&nbsp; EGAN</h1>
           </div>
-          <div className="hero__block hero__block--intro">
-            <p>Front End Developer + Designer based in <a target="_blank" href="https://www.google.com/maps/place/Austin,+TX/@30.3079828,-97.8934872,11z/data=!3m1!4b1!4m5!3m4!1s0x8644b599a0cc032f:0x5d9b464bd469d57a!8m2!3d30.2671524!4d-97.74306">Austin, TX</a></p>
+          <div className="hero__block hero__block--content">
+            <p className="hero__content">Front End Developer + Designer based in <a className="hero__content--link" target="_blank" href="https://www.google.com/maps/place/Austin,+TX/@30.3079828,-97.8934872,11z/data=!3m1!4b1!4m5!3m4!1s0x8644b599a0cc032f:0x5d9b464bd469d57a!8m2!3d30.2671524!4d-97.74306">Austin, TX</a></p>
           </div>
           <div className="hero__icons">
-            <a target="_blank" href="https://github.com/tw15egan"><img alt="github link" src={github} /></a>
-            <a target="_blank" href="https://twitter.com/TJ_egan"><img alt="twitter link" src={twitter} /></a>
-            <a target="_blank" href="https://www.linkedin.com/in/twegan"><img alt="linkedin link" src={linkedin} /></a>
-            <a target="_blank" href="https://play.spotify.com/user/tj_egan"><img alt="spotify link" src={spotify} /></a>
+            <a className="hero__icons--link" target="_blank" href="https://github.com/tw15egan"><img className="hero__icons--icon" alt="github link" src={github} /></a>
+            <a className="hero__icons--link" target="_blank" href="https://twitter.com/TJ_egan"><img className="hero__icons--icon" alt="twitter link" src={twitter} /></a>
+            <a className="hero__icons--link" target="_blank" href="https://www.linkedin.com/in/twegan"><img className="hero__icons--icon" alt="linkedin link" src={linkedin} /></a>
+            <a className="hero__icons--link" target="_blank" href="https://play.spotify.com/user/tj_egan"><img className="hero__icons--icon" alt="spotify link" src={spotify} /></a>
           </div>
         </div>
         <div className="portfolio">

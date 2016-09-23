@@ -76,9 +76,26 @@
 
       body {
         font-size: 18px;
+        color: #2F3138;
         background-color: #F5F5F5;
         transform: translateZ(0);
       }
+      /*::-webkit-scrollbar {
+          width: 12px;
+      }
+       
+      /* Track */
+      /*::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset -10px 0 0 6px rgba(47, 49, 56,0.8);  
+      }
+       
+      /* Handle */
+      /*::-webkit-scrollbar-thumb {
+          background: #FFD166; 
+      }
+      ::-webkit-scrollbar-thumb:window-inactive {
+      	background: #FFD166; 
+      } */
 
       h1 {
         -webkit-font-smoothing: antialiased;
@@ -97,11 +114,16 @@
         max-width: 2rem;
         max-height: 2rem;
       }
+      
+      .container {
+        overflow-x: hidden;
+      }
 
       .hero__block {
         opacity: 0;
         visibility: hidden;
         transform: scale(.8);
+        background-color: #FFD166;
       }
     </style>
 </head>
