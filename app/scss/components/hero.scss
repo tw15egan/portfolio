@@ -74,20 +74,21 @@
 
   &__icons {
     align-items: center;
-    background-color: $color__yellow;
-    border-radius: 10px 0 0;
-    bottom: 88px;
+    animation: $animation-time $animation-time*5 ease-out forwards pop;
+    background-color: $black;
+    border-radius: 0 0 0 10px;
     display: flex;
     height: 3rem;
     justify-content: flex-end;
     padding: 0 1.5rem;
     position: absolute;
     right: 0;
+    top: 82px;
     width: auto;
 
     @include bp('600px') {
       background-color: transparent;
-      top: 1rem;
+      top: 2rem;
     }
 
     &--link {
@@ -98,25 +99,49 @@
       margin: 0 .25rem;
       width: em(40);
 
-      &:hover {
-        img {
-          transform: scale(1) rotate(1turn);
+      @include bp('600px') {
+        align-items: flex-start;
+      }
 
-          @include bp('600px') {
-            background-color: $black;
-            box-shadow: 0 0 0 3px $color__yellow;
+      svg {
+        fill: $black;
+        height: 75%;
+        max-height: 2rem;
+        max-width: 2rem;
+        transition: all $animation-time;
+        width: 75%;
+
+        path {
+          transition: all $animation-time;
+
+          &:nth-child(1) {
+            fill: $black;
+          }
+
+          &:nth-child(2) {
+            fill: $color__yellow;
           }
         }
       }
-    }
 
-    &--icon {
-      border-radius: 50%;
-      box-shadow: 0 0 0 3px transparent;
-      transition: $animation-time all;
+      &:hover {
+        svg {
+          transform: scale(1) rotate(1turn);
 
-      @include bp('600px') {
-        background-color: $black;
+          path {
+            &:nth-child(1) {
+              fill: $color__yellow;
+            }
+
+            &:nth-child(2) {
+              fill: $black;
+            }
+          }
+
+          @include bp('600px') {
+            // box-shadow: 0 0 0 3px $color__yellow;
+          }
+        }
       }
     }
   }
@@ -126,7 +151,7 @@
   .hero {
     .hero__block {
       &:nth-child(#{$i}) {
-        animation-delay: ($i * $animation-time) + 500;
+        animation-delay: ($i * $animation-time);
       }
     }
   }
@@ -135,7 +160,7 @@
 @keyframes pop {
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translate(0, 0);
     visibility: visible;
   }
 }
