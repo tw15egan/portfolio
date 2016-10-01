@@ -80,22 +80,23 @@
         background-color: #F5F5F5;
         transform: translateZ(0);
       }
-      /*::-webkit-scrollbar {
+      
+      ::-webkit-scrollbar {
           width: 12px;
       }
        
       /* Track */
-      /*::-webkit-scrollbar-track {
+      ::-webkit-scrollbar-track {
         -webkit-box-shadow: inset -10px 0 0 6px rgba(47, 49, 56,0.8);  
       }
        
       /* Handle */
-      /*::-webkit-scrollbar-thumb {
+      ::-webkit-scrollbar-thumb {
           background: #FFD166; 
       }
       ::-webkit-scrollbar-thumb:window-inactive {
       	background: #FFD166; 
-      } */
+      } 
 
       h1 {
         -webkit-font-smoothing: antialiased;
@@ -110,19 +111,25 @@
         letter-spacing: .25px;
       }
       
-      img {
+      svg {
         max-width: 2rem;
         max-height: 2rem;
       }
       
-      .container {
-        overflow-x: hidden;
+      .hero__icons {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1) translate3d(125px, 0, 0);
+      }
+      
+      .container > div {
+        display: flex;
       }
 
       .hero__block {
         opacity: 0;
         visibility: hidden;
-        transform: scale(.8);
+        transform: scale(1) translate3d(0, 0, 0);
         background-color: #FFD166;
       }
     </style>
@@ -130,5 +137,5 @@
 <body>
   
   <div id="app"></div>
-<script type="text/javascript" src="/portfolio/bundle.js"></script></body>
+<script type="text/javascript" src="bundle.js"></script></body>
 </html>

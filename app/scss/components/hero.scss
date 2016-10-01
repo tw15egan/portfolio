@@ -74,7 +74,7 @@
 
   &__icons {
     align-items: center;
-    animation: $animation-time $animation-time*5 ease-out forwards pop;
+    animation: $animation-time $animation-time*3 ease-out forwards pop;
     background-color: $black;
     border-radius: 0 0 0 10px;
     display: flex;
@@ -137,10 +137,6 @@
               fill: $black;
             }
           }
-
-          @include bp('600px') {
-            // box-shadow: 0 0 0 3px $color__yellow;
-          }
         }
       }
     }
@@ -151,7 +147,7 @@
   .hero {
     .hero__block {
       &:nth-child(#{$i}) {
-        animation-delay: ($i * $animation-time);
+        animation-delay: ($i * $animation-time) / 2;
       }
     }
   }
@@ -160,7 +156,7 @@
 @keyframes pop {
   100% {
     opacity: 1;
-    transform: scale(1) translate(0, 0);
+    transform: scale(1) translate3d(0, 0, 0);
     visibility: visible;
   }
 }
