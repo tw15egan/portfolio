@@ -1,4 +1,13 @@
-// .portfolio {
-//   background-color: $white;
-//   min-height: 1000px;
-// }
+.portfolio {
+  background-color: $black__20;
+  color: $black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: $color__yellow;
+  margin: $spacing;
+  min-height: 300px;
+  width: 100%;
+}

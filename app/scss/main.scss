@@ -3,3 +3,7 @@
 @import 'components/overlay';
 @import 'components/hero';
 @import 'components/portfolio';
+
+p {
+  @include type-setting(0);
+}
