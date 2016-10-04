@@ -1,13 +1,59 @@
 .portfolio {
-  background-color: $black__20;
-  color: $black;
+  background-color: $color__yellow;
   display: flex;
   flex-wrap: wrap;
+  padding: $spacing;
+
+  &__title {
+    @include type-setting(2);
+    background-color: $black;
+    color: $white;
+    font-family: $font__family--primary;
+    font-weight: 100;
+    padding: $spacing-sm $spacing;
+  }
 }
 
 .card {
-  background-color: $color__yellow;
-  margin: $spacing;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: $spacing-xs 0;
+  overflow: hidden;
   width: 100%;
+
+  &:nth-of-type(1) {
+    margin-top: $spacing-xs*2;
+  }
+
+  &__handle {
+    @include type-setting(0);
+    background-color: $black;
+    color: $color__yellow;
+    font-family: $font__family--primary;
+    padding: $spacing-sm $spacing;
+    text-decoration: none;
+    z-index: 3;
+  }
+
+  &__container {
+    background-color: $white;
+    color: $black;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 $spacing;
+    transform: translateY(-100%);
+    transition: all $animation-time;
+    visibility: hidden;
+    z-index: 2;
+
+    &--active {
+      max-height: 40rem;
+      opacity: 1;
+      padding: $spacing;
+      transform: translateY(0);
+      transition: all $animation-time;
+      visibility: visible;
+    }
+  }
 }
