@@ -12,6 +12,18 @@ function minify() {
   };
 }
 
+function definePlugin() {
+  return {
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify('production'),
+        },
+      }),
+    ],
+  };
+}
+
 function devServer(options) {
   return {
     devServer: {
@@ -32,3 +44,4 @@ function devServer(options) {
 
 exports.devServer = devServer;
 exports.minify = minify;
+exports.definePlugin = definePlugin;
