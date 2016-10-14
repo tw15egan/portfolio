@@ -80,32 +80,14 @@
         background-color: #F5F5F5;
         transform: translateZ(0);
       }
-      
-      ::-webkit-scrollbar {
-          width: 12px;
-      }
-       
-      /* Track */
-      ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset -10px 0 0 6px rgba(47, 49, 56,0.8);  
-      }
-       
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-          background: #FFD166; 
-      }
-      ::-webkit-scrollbar-thumb:window-inactive {
-      	background: #FFD166; 
-      } 
 
       h1 {
-        -webkit-font-smoothing: antialiased;
         font-family: "fatfrank", helvetica, arial, sans-serif;
         line-height: 1.25;
         letter-spacing: .5px;
       }
       
-      p, span {
+      p, span, a {
         font-family: "proxima-nova", helvetica, arial, sans-serif;
         font-size: 1.125rem;
         line-height: 1.63125rem;
@@ -117,22 +99,24 @@
         max-height: 2rem;
       }
       
-      .hero__icons {
-        opacity: 0;
-        visibility: hidden;
-        transform: scale(1) translate3d(125px, 0, 0);
-      }
-      
       .container > div {
         display: flex;
       }
-
-      .hero__block {
+      
+      .hero__title {
         opacity: 0;
         visibility: hidden;
-        transform: scale(1) translate3d(0, 0, 0);
+      }
+
+      .hero__block {
         background-color: #FFD166;
       }
+      
+      .hero__icons {
+        position: absolute;
+        right: 0;
+      }
+
     </style>
 </head>
 <body>

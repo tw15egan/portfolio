@@ -1,16 +1,14 @@
 import React from 'react';
+import CodePen from './codepen';
 
-export default class Card extends React.Component {
+export default class BlogCard extends React.Component {
 
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
 
     this.state = {
-      img: '' || this.props.img,
-      project: '' || this.props.project,
-      url: '' || this.props.url,
-      active: true,
+      active: false || this.props.active,
     };
   }
 
@@ -28,29 +26,41 @@ export default class Card extends React.Component {
 
   render() {
     const containerClass = this.state.active ? 'card__container card__container--active' : 'card__container';
+    const handleClass = !this.state.active ? 'card__handle card__handle--active' : 'card__handle';
+
+    const {
+      hash,
+      project,
+      ...other,
+    } = this.props;
+
+
+    const props = {
+      onClick: this.handleClick,
+    };
+
     return (
       <div className="card">
-        <a href="/" onClick={this.handleClick} className="card__handle">
-          {this.state.project}
+        <a href="/" {...props} className={handleClass}>
+          {project}
         </a>
+
         <div className={containerClass}>
-          <p>{this.state.url}</p>
-          <p>{this.state.project}</p>
-          <p>{this.state.img}</p>
+          <CodePen {...other} hash={hash} />
         </div>
       </div>
     );
   }
 }
 
-Card.propTypes = {
-  img: React.PropTypes.string,
+BlogCard.propTypes = {
+  active: React.PropTypes.bool,
   project: React.PropTypes.string,
-  url: React.PropTypes.string,
+  hash: React.PropTypes.string,
 };
 
-Card.defaultProps = {
-  img: '',
+BlogCard.defaultProps = {
+  active: false,
   project: '',
-  url: '',
+  hash: 'qNQPgm',
 };

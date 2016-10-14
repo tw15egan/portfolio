@@ -1,4 +1,4 @@
-.portfolio {
+.blog {
   background-color: $color__yellow;
   display: flex;
   flex-wrap: wrap;
@@ -29,10 +29,43 @@
     @include type-setting(0);
     background-color: $black;
     color: $color__yellow;
-    font-family: $font__family--primary;
     padding: $spacing-sm $spacing;
+    position: relative;
     text-decoration: none;
+    transition: $animation-time all;
     z-index: 3;
+
+    &::after,
+    &::before {
+      background-color: $color__yellow;
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      transition: $animation-time all;
+      width: $base-font-size;
+    }
+
+    &::before {
+      right: $spacing;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      right: $spacing;
+      transform: rotate(45deg);
+    }
+
+    &--active {
+      &::before {
+        transform: rotate(180deg);
+      }
+
+      &::after {
+        transform: rotate(360deg);
+      }
+    }
   }
 
   &__container {

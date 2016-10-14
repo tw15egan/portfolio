@@ -1,4 +1,7 @@
 .hero {
+  background-position: 55% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -6,10 +9,13 @@
   position: relative;
 
   @include bp('600px') {
+    background-position: center center;
     padding: $spacing;
   }
 
   &__title {
+    animation: $animation-time ease-out $animation-time forwards pop;
+    transition: $animation-time all ease-out;
     @include type-setting(3);
     @include bp('600px') {
       @include type-setting(4);
@@ -17,12 +23,15 @@
   }
 
   &__block {
-    animation: $animation-time ease-out forwards pop;
     padding: $spacing-sm $spacing;
-    transition: $animation-time all ease-out;
 
     &--title {
+      background-color: $black;
+      color: $color__yellow;
+
       @include bp('600px') {
+        background-color: $color__yellow;
+        color: $black;
         max-width: 220px;
       }
     }
@@ -52,6 +61,7 @@
     }
 
     &--link {
+      @include type-setting(0);
       box-shadow: inset 0 -3px 0 $color__yellow;
       color: $color__yellow;
       text-decoration: none;
@@ -63,6 +73,7 @@
       }
 
       @include bp('600px') {
+        @include type-setting(1);
         box-shadow: inset 0 -3px 0 $black;
         color: $black;
 
@@ -75,20 +86,9 @@
   }
 }
 
-@for $i from 1 to 4 {
-  .hero {
-    .hero__block {
-      &:nth-child(#{$i}) {
-        animation-delay: ($i * $animation-time) / 2;
-      }
-    }
-  }
-}
-
 @keyframes pop {
   100% {
     opacity: 1;
-    transform: scale(1) translate3d(0, 0, 0);
     visibility: visible;
   }
 }

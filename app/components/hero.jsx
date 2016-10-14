@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialIcons from './social-icons';
-import tj from '../img/tj.jpg';
+import tj from '../img/tj-2.jpg';
 
 const divStyle = {
   backgroundImage: `url(${tj})`,
@@ -9,10 +9,7 @@ const divStyle = {
 function Hero() {
   return (
     <div>
-      <div className="overlay">
-        <div className="overlay__image" style={divStyle} />
-      </div>
-      <div className="hero">
+      <div className="hero" style={divStyle}>
         <div className="hero__block hero__block--title">
           <h1 className="hero__title">TJ&nbsp; EGAN</h1>
         </div>

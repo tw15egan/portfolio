@@ -17,7 +17,7 @@ const common = {
   },
   output: {
     path: PATHS.build,
-    publicPath: '/portfolio/',
+    // publicPath: '/portfolio/',
     filename: 'bundle.js',
   },
   module: {
@@ -27,7 +27,7 @@ const common = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react'],
+          presets: ['es2015', 'react', 'stage-0'],
         },
       },
       {
