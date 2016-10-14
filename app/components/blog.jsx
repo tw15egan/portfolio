@@ -5,9 +5,10 @@ function Blog() {
   return (
     <div className="blog">
       <h1 className="blog__title">Recent Codepens</h1>
-      <BlogCard active project="React Image Search" hash="qNQPgm" theme="dark" />
+      <BlogCard project="NFL Schedule" hash="NRqXAq" />
+      <BlogCard project="React Image Search" hash="qNQPgm" />
       <BlogCard project="Rotating Image Cube" hash="OXgaNy" />
-      <BlogCard />
+
     </div>
   );
 }

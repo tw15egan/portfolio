@@ -69,7 +69,6 @@
   }
 
   &__container {
-    background-color: $white;
     color: $black;
     max-height: 0;
     opacity: 0;
@@ -81,6 +80,7 @@
     z-index: 2;
 
     &--active {
+      background-color: $black__20;
       max-height: 40rem;
       opacity: 1;
       padding: $spacing;

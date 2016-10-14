@@ -36,17 +36,16 @@ export default class BlogCard extends React.Component {
 
 
     const props = {
-      onClick: this.handleClick,
+      active: this.state.active,
     };
 
     return (
       <div className="card">
-        <a href="/" {...props} className={handleClass}>
+        <a href="/" onClick={this.handleClick} className={handleClass}>
           {project}
         </a>
-
         <div className={containerClass}>
-          <CodePen {...other} hash={hash} />
+          <CodePen active={this.state.active} {...other} {...props} hash={hash} />
         </div>
       </div>
     );
