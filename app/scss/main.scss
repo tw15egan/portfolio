@@ -2,9 +2,17 @@
 @import 'helpers/vars';
 @import 'components/overlay';
 @import 'components/hero';
+@import 'components/portfolio';
 @import 'components/blog';
 @import 'components/icons';
 
 p {
   @include type-setting(0);
+}
+
+h1 {
+  @include type-setting(3);
+  @include bp('600px') {
+    @include type-setting(4);
+  }
 }

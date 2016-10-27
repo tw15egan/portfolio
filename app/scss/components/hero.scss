@@ -16,10 +16,6 @@
   &__title {
     animation: $animation-time ease-out $animation-time forwards pop;
     transition: $animation-time all ease-out;
-    @include type-setting(3);
-    @include bp('600px') {
-      @include type-setting(4);
-    }
   }
 
   &__block {

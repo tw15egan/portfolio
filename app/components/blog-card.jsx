@@ -25,8 +25,8 @@ export default class BlogCard extends React.Component {
   }
 
   render() {
-    const containerClass = this.state.active ? 'card__container card__container--active' : 'card__container';
-    const handleClass = !this.state.active ? 'card__handle card__handle--active' : 'card__handle';
+    const containerClass = this.state.active ? 'blog-card__container blog-card__container--active' : 'blog-card__container';
+    const handleClass = !this.state.active ? 'blog-card__handle blog-card__handle--active' : 'blog-card__handle';
 
     const {
       hash,
@@ -40,7 +40,7 @@ export default class BlogCard extends React.Component {
     };
 
     return (
-      <div className="card">
+      <div className="blog-card">
         <a href="/" onClick={this.handleClick} className={handleClass}>
           {project}
         </a>
