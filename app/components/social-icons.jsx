@@ -3,9 +3,9 @@ import Icon from './icon';
 
 function SocialIcons() {
   return (
-    <div className="hero__icons">
+    <div className="social__icons">
       <a
-        className="hero__icons--link"
+        className="social__icons--link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/tw15egan"
@@ -13,7 +13,7 @@ function SocialIcons() {
         <Icon title="github" />
       </a>
       <a
-        className="hero__icons--link"
+        className="social__icons--link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://twitter.com/TJ_egan"
@@ -21,7 +21,7 @@ function SocialIcons() {
         <Icon title="twitter" />
       </a>
       <a
-        className="hero__icons--link"
+        className="social__icons--link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/twegan"
@@ -29,7 +29,7 @@ function SocialIcons() {
         <Icon title="linkedin" />
       </a>
       <a
-        className="hero__icons--link"
+        className="social__icons--link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://play.spotify.com/user/tj_egan"

@@ -2,7 +2,7 @@
   background-color: $white;
   display: flex;
   flex-wrap: wrap;
-  padding: $spacing;
+  margin-top: $spacing-lg;
 
   &__title {
     @include type-setting(2);

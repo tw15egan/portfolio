@@ -1,9 +1,6 @@
 import React from 'react';
 import code from '../img/code.jpeg';
-
-const divStyle = {
-  backgroundImage: `url(${code})`,
-};
+import Icon from './icon';
 
 export default class PortfolioCard extends React.Component {
 
@@ -35,16 +32,32 @@ export default class PortfolioCard extends React.Component {
 
     return (
       <section className={containerClass} {...props}>
+        <img className="portfolio-card__img" role="presentation" src={code} />
         <div className="portfolio-card__description">
           <h1>{this.props.title}</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, lectus eget suscipit tincidunt, quam ante volutpat turpis, nec egestas odio lorem eu augue. Praesent dapibus lacus neque, sit amet bibendum urna aliquam non. Aenean ipsum diam, ultricies ac felis a, vestibulum vestibulum est. Aenean condimentum ex id finibus porttitor. Sed euismod molestie accumsan. Mauris laoreet nisi elit, id blandit nibh pretium eu. In felis est, elementum vitae mi non, dictum iaculis erat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, lectus eget suscipit tincidunt, quam ante volutpat turpis, nec egestas odio lorem eu augue.</p>
         </div>
         <div className="portfolio-card__description">
-
-          <h1>Links:</h1>
-          <a href="link">Github</a>
+          <a
+            className="portfolio-card__link"
+            rel="noopener noreferrer"
+            target="_blank"
+            href={this.props.github}
+          >
+            <Icon title="github" />
+            <span>Github</span>
+          </a>
+          <a
+            className="portfolio-card__link"
+            rel="noopener noreferrer"
+            target="_blank"
+            href={this.props.website}
+          >
+            <Icon title="web" />
+            <span>Website</span>
+          </a>
         </div>
-        <div className="portfolio-card__img" role="presentation" style={divStyle} />
+
       </section>
     );
   }
