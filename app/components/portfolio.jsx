@@ -7,7 +7,6 @@ function Portfolio() {
       <PortfolioCard title="Rapid Tow Bar" />
       <PortfolioCard title="Egan Appr" />
       <PortfolioCard title="IBM Blue Box Help" />
-      <PortfolioCard title="Now Playing" />
     </div>
   );
 }

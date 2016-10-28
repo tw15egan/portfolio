@@ -1,5 +1,5 @@
 .blog {
-  background-color: $color__yellow;
+  background-color: $white;
   display: flex;
   flex-wrap: wrap;
   padding: $spacing;
@@ -28,12 +28,19 @@
   &__handle {
     @include type-setting(0);
     background-color: $black;
+    box-shadow: none;
     color: $color__yellow;
     padding: $spacing-sm $spacing;
     position: relative;
     text-decoration: none;
     transition: $animation-time all;
     z-index: 3;
+    
+    &:hover {
+      width: 100%;
+      // box-shadow: none;
+      box-shadow: inset 800px 0px 0 $color__yellow;
+    }
 
     &::after,
     &::before {

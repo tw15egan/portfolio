@@ -22,22 +22,20 @@
     padding: $spacing-sm $spacing;
 
     &--title {
-      background-color: $black;
-      color: $color__yellow;
+      background-color: $white;
+      color: $black;
 
       @include bp('600px') {
-        background-color: $color__yellow;
-        color: $black;
         max-width: 220px;
       }
     }
 
     &--content {
-      background-color: $black;
-      color: $color__yellow;
+      background-color: $white;
+      color: $black;
 
       @include bp('600px') {
-        background-color: $color__yellow;
+        background-color: $white;
         color: $black;
         max-width: 700px;
       }
@@ -54,30 +52,6 @@
     @include bp('700px') {
       @include type-setting(1);
       max-width: 700px;
-    }
-
-    &--link {
-      @include type-setting(0);
-      box-shadow: inset 0 -3px 0 $color__yellow;
-      color: $color__yellow;
-      text-decoration: none;
-      transition: $animation-time all ease-out;
-
-      &:hover {
-        box-shadow: inset 200px -4px 0 $color__yellow;
-        color: $black;
-      }
-
-      @include bp('600px') {
-        @include type-setting(1);
-        box-shadow: inset 0 -3px 0 $black;
-        color: $black;
-
-        &:hover {
-          box-shadow: inset 200px -4px 0 $black;
-          color: $color__yellow;
-        }
-      }
     }
   }
 }

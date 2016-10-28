@@ -16,8 +16,8 @@ $colors: #EF476F #FFD166 #06D6A0 #118AB2;
 $font__family--primary: 'proxima-nova', helvetica, arial, sans-serif;
 $font__family--secondary: 'fatfrank', helvetica, arial, sans-serif;
 
-$animation-time: 280ms;
-$animation-easing: ease;
+$animation-time: 250ms;
+$animation-easing: ease-in;
 
 $base-font-size: 1.125rem;
 $base-line-height: $base-font-size * 1.45;

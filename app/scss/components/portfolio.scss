@@ -1,131 +1,26 @@
 .portfolio {
-  background-color: $color__yellow;
+  margin-top: $spacing-lg;
+  background-color: $black;
   display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  min-height: 600px;
-  position: relative;
-  width: 100%;
+  flex-direction: column;
+  
+  padding: $spacing $spacing;
+
+  @include bp('600px') {
+    padding: $spacing-lg;
+    flex-direction: row;
+    flex-wrap: wrap;
+  };
 
   &-card {
-    // -webkit-clip-path: circle(100% at 50% 50%);
-    background-color: darken($color__yellow, 50%);
-    background-size: cover;
-    display: flex;
-    height: 50%;
-    position: absolute;
-    transition: $animation-time all $animation-easing;
-    width: 50%;
-    z-index: 1;
+    background-color: $white;
+    min-height: 500px;
+    padding: $spacing;
+    margin: $spacing 0;
 
-    @include bp('600px') {
-      @include type-setting(4);
-    }
-
-    &:nth-child(1) {
-      left: 0;
-      top: 0;
-    }
-
-    &:nth-child(2) {
-      left: 50%;
-      top: 0;
-    }
-
-    &:nth-child(3) {
-      left: 0;
-      top: 50%;
-    }
-
-    &:nth-child(4) {
-      left: 50%;
-      top: 50%;
-    }
-
-    &--active {
-      align-items: flex-start;
-      justify-content: flex-start;
-      background-color: $color__yellow;
-
-      &:nth-child(1n+1) {
-        // -webkit-clip-path: circle(100% at 50% 50%);
-        height: 100%;
-        left: 0;
-        top: 0;
-        transition: $animation-time all $animation-easing;
-        width: 100%;
-        z-index: 10;
-
-        .portfolio-card {
-          &__img {
-            height: 100%;
-            mix-blend-mode: normal;
-            position: absolute;
-            transition: $animation-time all $animation-easing;
-            transition-delay: $animation-time;
-            width: 50%;
-          }
-
-          &__title {
-            background-color: transparent;
-            color: $black;
-            opacity: 0;
-            bottom: 0;
-            visibility: hidden;
-            @include type-setting(1);
-          }
-
-          &__description {
-            width: 50%;
-            opacity: 1;
-            visibility: visible;
-            transition: $animation-time all $animation-easing;
-            transition-delay: $animation-time*2;
-          }
-        }
-      }
-    }
-
-    &__title {
-      background-color: $black;
-      color: $color__yellow;
-      bottom: $spacing;
-      left: $spacing;
-      display: inline-block;
-      padding: 0 $spacing;
-      position: absolute;
-      transition: $animation-time all $animation-easing;
-      @include type-setting(2);
-      z-index: 1;
-    }
-
-    &__img {
-      height: 100%;
-      mix-blend-mode: screen;
-      object-fit: cover;
-      position: absolute;
-      right: 0;
-      transition: $animation-time*1.5 all $animation-easing;
-      width: 100%;
-    }
-
-    &__description {
-      opacity: 0;
-      padding: $spacing-lg;
-      visibility: hidden;
-
-      h1 {
-        margin-bottom: $spacing-lg;
-      }
-    }
+    @include bp('800px') {
+      margin: $spacing;
+      max-width: calc(50% - (#{$spacing} * 2);
+    };
   }
 }
-
-// @each $color in $colors {
-//   $i: index($colors, $color);
-// 
-//   .portfolio-card:nth-child(#{$i}) {
-//     background-color: nth($colors, $i);
-//   }
-// }
-
