@@ -24,7 +24,6 @@
       display: flex;
       height: $base-font-size*2;
       justify-content: center;
-      margin: 0 $spacing-xs;
       width: em(40);
 
       @include bp('600px') {

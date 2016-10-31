@@ -1,10 +1,8 @@
 .hero {
-  background-position: 55% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: calc(100% - #{$spacing-lg});
   overflow-x: hidden;
   position: relative;
 
@@ -19,9 +17,8 @@
   }
 
   &__block {
-    padding: $spacing-sm $spacing;
-
     &--title {
+      padding: $spacing-sm $spacing;
       background-color: $white;
       color: $black;
 
@@ -33,25 +30,34 @@
     &--content {
       background-color: $white;
       color: $black;
+      display: inline-flex;
 
       @include bp('600px') {
-        background-color: $white;
-        color: $black;
         max-width: 700px;
+        background-color: transparent;
       }
     }
   }
 
   &__content {
+    display: inline-block;
+    height: auto;
+    background-color: $white;
+    color: $black;
+    padding: $spacing-sm $spacing;
     max-width: 300px;
+    @include type-setting(0);
 
-    @include bp('600px') {
-      max-width: 310px;
-    }
-
-    @include bp('700px') {
+    @include bp('740px') {
       @include type-setting(1);
-      max-width: 700px;
+      max-width: 100%;
+    }
+    
+    a {
+      @include type-setting(0);
+      @include bp('740px') {
+        @include type-setting(1);
+      }
     }
   }
 }

@@ -9,7 +9,7 @@
 .container {
   padding: 0;
   @include bp('600px') {
-    padding: 5%;
+    padding: $spacing-lg;
   };
 }
 
