@@ -18,9 +18,9 @@
 
   &__block {
     &--title {
-      padding: $spacing-sm $spacing;
       background-color: $white;
       color: $black;
+      padding: $spacing-sm $spacing;
 
       @include bp('600px') {
         max-width: 220px;
@@ -33,26 +33,27 @@
       display: inline-flex;
 
       @include bp('600px') {
-        max-width: 700px;
         background-color: transparent;
+        max-width: 700px;
       }
     }
   }
 
   &__content {
-    display: inline-block;
-    height: auto;
     background-color: $white;
     color: $black;
-    padding: $spacing-sm $spacing;
+    display: inline-block;
+    height: auto;
     max-width: 300px;
+    padding: $spacing-sm $spacing;
+
     @include type-setting(0);
 
     @include bp('740px') {
       @include type-setting(1);
       max-width: 100%;
     }
-    
+
     a {
       @include type-setting(0);
       @include bp('740px') {

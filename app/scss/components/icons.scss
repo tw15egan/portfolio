@@ -58,6 +58,7 @@
 
       &:hover {
         box-shadow: none;
+
         svg {
           @include bp('600px') {
             transform: scale(1) rotate(1turn);
