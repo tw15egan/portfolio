@@ -107,12 +107,12 @@ $gradient-2: rgba($color__yellow, 0);
       flex-direction: column;
       margin: 0 $spacing;
 
-      &:nth-of-type(2) {
+      &:nth-child(2) {
         padding-top: $spacing-xs;
       }
 
-      &:nth-of-type(3) {
-        margin: $spacing-sm 0 $spacing;
+      &:nth-child(3) {
+        margin: $spacing-sm 0;
       }
 
       p {
