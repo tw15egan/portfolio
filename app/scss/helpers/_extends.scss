@@ -1,0 +1,9 @@
+%title {
+  @include type-setting(2);
+  background-color: $black;
+  color: $white;
+  display: inline-flex;
+  font-family: $font__family--primary;
+  font-weight: 100;
+  padding: $spacing-sm $spacing;
+}

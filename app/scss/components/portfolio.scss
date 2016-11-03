@@ -2,17 +2,28 @@
   background-color: darken($white, 10%);
   display: flex;
   flex-direction: column;
-  margin-top: $spacing-lg;
   padding: $spacing;
 
   @include bp('600px') {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: $spacing-lg;
+    margin-top: $spacing;
+    padding: $spacing $spacing-lg;
   };
+
+  &__container {
+    display: block;
+    margin-top: $spacing-lg;
+  }
+
+  &__title {
+    @extend %title;
+  }
 
   &-card {
     background-color: $white;
+    display: flex;
+    flex-direction: column;
     margin: $spacing 0;
 
     @include bp('800px') {
@@ -25,62 +36,87 @@
       max-width: calc(33% - (#{$spacing} * 2));
     };
 
+    h1 {
+      @extend %title;
+      @include type-setting(1);
+
+      @include bp('1450px') {
+        @include type-setting(2);
+      };
+    }
+
     &__img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+      position: relative;
+      transition: all $animation-time;
       width: 100%;
+
+      &::before {
+        background-image: linear-gradient(to bottom, rgba($color__yellow, .9) 50%, rgba($color__yellow, 0) 50%);
+        background-size: 200%;
+        background-position: 0 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: all $animation-time;
+        width: 100%;
+      }
+
+      &:hover {
+        background-position: left;
+
+        &::before {
+          transition: all $animation-time;
+          // background-image: linear-gradient(to bottom right, rgba($color__yellow, 1), rgba($color__yellow, 1));
+          background-position: 100% 100%;
+        }
+      }
     }
 
     &__description {
-      margin: 0 $spacing;
-      padding: $spacing 0;
       display: flex;
       flex-direction: column;
-      
-
-      &:nth-of-type(1) {
-        padding-top: $spacing-xs;
-        padding-bottom: 0;
-      }
+      margin: 0 $spacing;
 
       &:nth-of-type(2) {
-        margin: 0;
+        padding-top: $spacing-xs;
       }
 
-      h1 {
-        @include type-setting(1);
-        font-family: $font__family--primary;
-
-        @include bp('1375px') {
-          @include type-setting(2);
-        };
+      &:nth-of-type(3) {
+        margin: $spacing-sm 0 $spacing;
       }
 
       p {
         @include type-setting(0);
-        padding: $spacing 0;
-        color: $black__40;
         border-bottom: 2px solid darken($white, 20%);
-        border-top: 2px solid darken($white, 20%);
+        color: $black__40;
+        padding: $spacing 0;
       }
     }
-    
+
     &__link {
-      width: 100%;
+      align-items: center;
       box-shadow: none;
       display: flex;
-      align-items: center;
       padding: $spacing-xs $spacing;
-      
+      width: 100%;
+
       &:hover {
         box-shadow: inset 650px 0 0 $color__yellow;
       }
-      
+
       span {
         margin-left: $spacing-sm;
       }
-      
+
       svg {
-        border-radius: 50%;
         background-color: $white;
+        border-radius: 50%;
       }
     }
   }

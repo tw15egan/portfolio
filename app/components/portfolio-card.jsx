@@ -1,5 +1,4 @@
 import React from 'react';
-import code from '../img/code.jpeg';
 import Icon from './icon';
 
 export default class PortfolioCard extends React.Component {
@@ -26,16 +25,25 @@ export default class PortfolioCard extends React.Component {
   render() {
     const containerClass = this.state.active ? 'portfolio-card portfolio-card--active' : 'portfolio-card';
 
+    const divStyle = {
+      backgroundImage: `url(${this.props.img})`,
+    };
+
     const props = {
       onClick: this.handleClick,
     };
 
     return (
       <section className={containerClass} {...props}>
-        <img className="portfolio-card__img" role="presentation" src={code} />
+        <h1>{this.props.title}</h1>
+        <div className="portfolio-card__img" role="presentation" style={divStyle} />
         <div className="portfolio-card__description">
-          <h1>{this.props.title}</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, lectus eget suscipit tincidunt, quam ante volutpat turpis, nec egestas odio lorem eu augue.</p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Ut sagittis, lectus eget suscipit tincidunt,
+            quam ante volutpat turpis, nec egestas odio lorem eu augue.
+          </p>
         </div>
         <div className="portfolio-card__description">
           <a
@@ -66,6 +74,9 @@ export default class PortfolioCard extends React.Component {
 PortfolioCard.propTypes = {
   active: React.PropTypes.bool,
   title: React.PropTypes.string,
+  img: React.PropTypes.string,
+  github: React.PropTypes.string,
+  website: React.PropTypes.string,
   // hash: React.PropTypes.string,
 };
 

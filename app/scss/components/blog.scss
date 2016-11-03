@@ -2,15 +2,11 @@
   background-color: $white;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: $spacing;
   margin-top: $spacing-lg;
 
   &__title {
-    @include type-setting(2);
-    background-color: $black;
-    color: $white;
-    font-family: $font__family--primary;
-    font-weight: 100;
-    padding: $spacing-sm $spacing;
+    @extend %title;
   }
 }
 
@@ -22,7 +18,7 @@
   width: 100%;
 
   &:nth-of-type(1) {
-    margin-top: $spacing-xs*2;
+    margin-top: $spacing;
   }
 
   &__handle {
@@ -35,11 +31,10 @@
     text-decoration: none;
     transition: $animation-time all;
     z-index: 3;
-    
+
     &:hover {
+      box-shadow: inset 800px 0 0 $color__yellow;
       width: 100%;
-      // box-shadow: none;
-      box-shadow: inset 800px 0px 0 $color__yellow;
     }
 
     &::after,
