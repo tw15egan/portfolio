@@ -1,6 +1,7 @@
 %title {
   @include type-setting(2);
   background-color: $black;
+  box-shadow: $bs-1;
   color: $white;
   display: inline-flex;
   font-family: $font__family--primary;

@@ -35,10 +35,16 @@ export default class PortfolioCard extends React.Component {
 
     return (
       <section className={containerClass} {...props}>
-        <h1>{this.props.title}</h1>
-        <div className="portfolio-card__img" role="presentation" style={divStyle} />
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href={this.props.website}
+        >
+          <div className="portfolio-card__img" role="presentation" style={divStyle}>
+            <h1>{this.props.title}</h1>
+          </div>
+        </a>
         <div className="portfolio-card__description">
-
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Ut sagittis, lectus eget suscipit tincidunt,
