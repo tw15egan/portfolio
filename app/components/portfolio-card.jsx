@@ -36,6 +36,7 @@ export default class PortfolioCard extends React.Component {
     return (
       <section className={containerClass} {...props}>
         <a
+          className="portfolio-link"
           rel="noopener noreferrer"
           target="_blank"
           href={this.props.website}

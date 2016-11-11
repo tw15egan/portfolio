@@ -1,13 +1,13 @@
 .social {
   &__icons {
     align-items: center;
-    animation: $animation-time $animation-time*3 ease-out forwards pop;
+    animation: $animation-time $animation-time * 3 ease-out forwards pop;
     background-color: darken($white, 15%);
-    bottom: 91px;
+    bottom: 0;
     display: flex;
-    height: $base-font-size*2;
+    height: 3.5rem;
     justify-content: flex-end;
-    padding: $spacing;
+    padding-right: 22.1px;
     position: absolute;
     right: 0;
     width: 100%;
@@ -22,7 +22,7 @@
       align-items: center;
       box-shadow: none;
       display: flex;
-      height: $base-font-size*2;
+      height: $base-font-size * 2;
       justify-content: center;
       width: em(40);
 
@@ -32,12 +32,15 @@
 
       svg {
         border-radius: 50%;
-        box-shadow: $bs-2;
         height: 100%;
         max-height: 2rem;
         max-width: 2rem;
         transition: all $animation-time;
         width: 100%;
+
+        @include bp('600px') {
+          box-shadow: $bs-2;
+        }
 
         path {
           transition: all $animation-time;
@@ -62,9 +65,9 @@
         box-shadow: none;
 
         svg {
-          box-shadow: $bs-3;
           @include bp('600px') {
-            transform: scale(1) rotate(1turn);
+            box-shadow: $bs-3;
+            transform: scale(1.25);
           }
 
           path {

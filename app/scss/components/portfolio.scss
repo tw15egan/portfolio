@@ -3,12 +3,12 @@ $gradient-2: rgba($color__yellow, 0);
 
 .portfolio {
   background-color: darken($white, 10%);
-  box-shadow: $bs-1;
   display: flex;
   flex-direction: column;
   padding: $spacing;
 
   @include bp('600px') {
+    box-shadow: $bs-1;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: $spacing;
@@ -20,16 +20,24 @@ $gradient-2: rgba($color__yellow, 0);
     margin-top: $spacing-lg;
   }
 
+  &-link {
+    box-shadow: none;
+  }
+
   &__title {
     @extend %title;
+    margin-bottom: $spacing;
   }
 
   &-card {
     background-color: $white;
-    box-shadow: $bs-2;
     display: flex;
     flex-direction: column;
     margin: $spacing 0;
+
+    @include bp('600px') {
+      box-shadow: $bs-2;
+    };
 
     @include bp('800px') {
       margin: $spacing;
@@ -54,7 +62,6 @@ $gradient-2: rgba($color__yellow, 0);
       h1 {
         @extend %title;
         @include type-setting(0);
-        box-shadow: $bs-3;
         display: inline-block;
         left: 50%;
         position: absolute;
@@ -63,6 +70,10 @@ $gradient-2: rgba($color__yellow, 0);
         transform: translate(-50%, -50%);
         transition: all $animation-time;
         width: 75%;
+
+        @include bp('600px') {
+          box-shadow: $bs-3;
+        };
 
         @include bp('1450px') {
           @include type-setting(2);

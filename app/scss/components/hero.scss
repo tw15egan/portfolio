@@ -1,14 +1,13 @@
 .hero {
-  box-shadow: $bs-1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(100% - #{$spacing-lg});
-  overflow-x: hidden;
+  min-height: 500px;
   position: relative;
 
   @include bp('600px') {
     background-position: center center;
+    box-shadow: $bs-1;
     padding: $spacing;
   }
 
@@ -20,37 +19,44 @@
   &__block {
     &--title {
       background-color: $white;
-      box-shadow: $bs-2;
       color: $black;
       padding: $spacing-sm $spacing;
 
       @include bp('600px') {
+        box-shadow: $bs-2;
         max-width: 220px;
       }
     }
 
     &--content {
       background-color: $white;
+      bottom: 3.5rem;
       color: $black;
       display: inline-flex;
+      position: absolute;
 
       @include bp('600px') {
         background-color: transparent;
         max-width: 700px;
+        position: initial;
       }
     }
   }
 
   &__content {
+    @include type-setting(0);
     background-color: $white;
-    box-shadow: $bs-2;
     color: $black;
     display: inline-block;
+    font-weight: 600;
     height: auto;
     max-width: 300px;
     padding: $spacing-sm $spacing;
 
-    @include type-setting(0);
+    @include bp('600px') {
+      box-shadow: $bs-2;
+      font-weight: 400;
+    }
 
     @include bp('740px') {
       @include type-setting(1);
