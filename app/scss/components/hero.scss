@@ -48,7 +48,7 @@
     display: inline-block;
     font-weight: 600;
     height: auto;
-    padding: $spacing-sm $spacing;
+    padding: $spacing;
     width: 100%;
 
     @include bp('600px') {
