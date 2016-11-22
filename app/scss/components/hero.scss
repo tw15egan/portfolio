@@ -2,13 +2,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 500px;
-  position: relative;
 
   @include bp('600px') {
-    background-position: center center;
     box-shadow: $bs-1;
-    padding: $spacing;
+  }
+
+  &__image {
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    justify-content: space-between;
+    min-height: 500px;
+    position: relative;
+
+    @include bp('600px') {
+      padding: $spacing;
+    }
   }
 
   &__title {
@@ -17,44 +28,33 @@
   }
 
   &__block {
-    &--title {
-      background-color: $white;
-      color: $black;
-      padding: $spacing-sm $spacing;
+    background-color: $white;
+    color: $black;
+    padding: $spacing-sm $spacing;
 
-      @include bp('600px') {
-        box-shadow: $bs-2;
-        max-width: 220px;
-      }
-    }
-
-    &--content {
-      background-color: $white;
-      bottom: 3.5rem;
-      color: $black;
-      display: inline-flex;
-      position: absolute;
-
-      @include bp('600px') {
-        background-color: transparent;
-        max-width: 700px;
-        position: initial;
-      }
+    @include bp('600px') {
+      max-width: 220px;
     }
   }
 
+  &__footer {
+    display: flex;
+  }
+
   &__content {
-    @include type-setting(0);
+    @include type-setting(1);
     background-color: $white;
     color: $black;
     display: inline-block;
     font-weight: 600;
     height: auto;
-    max-width: 300px;
     padding: $spacing-sm $spacing;
+    width: 100%;
 
     @include bp('600px') {
-      box-shadow: $bs-2;
+      @include type-setting(0);
+      background-color: $black;
+      color: $color__yellow;
       font-weight: 400;
     }
 
@@ -64,7 +64,14 @@
     }
 
     a {
-      @include type-setting(0);
+      @include type-setting(1);
+      color: $black;
+
+      @include bp('600px') {
+        @include type-setting(0);
+        color: $color__yellow;
+      }
+
       @include bp('740px') {
         @include type-setting(1);
       }

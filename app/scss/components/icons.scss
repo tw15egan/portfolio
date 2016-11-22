@@ -2,7 +2,7 @@
   &__icons {
     align-items: center;
     animation: $animation-time $animation-time * 3 ease-out forwards pop;
-    background-color: darken($white, 15%);
+    background-color: $black;
     bottom: 0;
     display: flex;
     height: 3.5rem;
@@ -24,23 +24,13 @@
       display: flex;
       height: $base-font-size * 2;
       justify-content: center;
-      width: em(40);
-
-      @include bp('600px') {
-        align-items: flex-start;
-      }
+      min-width: em(30);
 
       svg {
         border-radius: 50%;
-        height: 100%;
-        max-height: 2rem;
-        max-width: 2rem;
+        height: 1.5rem;
         transition: all $animation-time;
-        width: 100%;
-
-        @include bp('600px') {
-          box-shadow: $bs-2;
-        }
+        width: 1.5rem;
 
         path {
           transition: all $animation-time;
@@ -63,13 +53,11 @@
 
       &:hover {
         box-shadow: none;
+        @include bp('600px') {
+          transform: scale(1.25);
+        }
 
         svg {
-          @include bp('600px') {
-            box-shadow: $bs-3;
-            transform: scale(1.25);
-          }
-
           path {
             &:nth-child(1) {
               fill: $color__yellow;
