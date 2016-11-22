@@ -9,6 +9,8 @@
 .container {
   padding: 0;
   @include bp('600px') {
+    margin: 0 auto;
+    max-width: 1200px;
     padding: $spacing-lg;
   };
 }
