@@ -22,6 +22,10 @@ $gradient-2: rgba($color__yellow, 0);
 
   &-link {
     box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 
   &__title {
@@ -50,12 +54,11 @@ $gradient-2: rgba($color__yellow, 0);
     };
 
     &__img {
-      background-position: left top;
+      background-position: center 66px;
       background-repeat: no-repeat;
-      background-size: 200%;
+      background-size: 100%;
       cursor: pointer;
-      height: 300px;
-      position: relative;
+      height: 240px;
       transition: all $animation-time;
       width: 100%;
 
@@ -63,53 +66,17 @@ $gradient-2: rgba($color__yellow, 0);
         @extend %title;
         @include type-setting(0);
         display: inline-block;
-        left: 50%;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        text-align: left;
         transition: all $animation-time;
-        width: 75%;
+        width: 100%;
 
         @include bp('600px') {
-          box-shadow: $bs-3;
+          box-shadow: none;
         };
 
         @include bp('1450px') {
           @include type-setting(2);
         };
-      }
-
-      &::before {
-        background-image: linear-gradient(to bottom,  $gradient-1 50%, $gradient-2 50%);
-        background-position: 0 0;
-        background-size: 200%;
-        content: '';
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        transition: all $animation-time;
-        width: 100%;
-      }
-
-      &:hover,
-      &:active {
-        background-position: left 66px;
-        background-size: 100%;
-        padding-top: 2rem;
-        transition-delay: $animation-time;
-
-        h1 {
-          left: 0;
-          top: 0;
-          transform: translate(0);
-          width: 100%;
-        }
-
-        &::before {
-          background-position: 100% 100%;
-        }
       }
     }
 
