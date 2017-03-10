@@ -21,7 +21,7 @@ export default class App extends React.Component {
     return (
       <div ref="app" className="container">
         <Hero />
-        <Portfolio />
+        {/*<Portfolio />*/}
         <Blog />
       </div>
     );
